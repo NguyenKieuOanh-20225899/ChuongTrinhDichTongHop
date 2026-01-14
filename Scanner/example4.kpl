@@ -1,0 +1,22 @@
+Program AllErrors; (* Test toan bo loi *)
+Begin
+    (* 1. Loi ky tu la (ERR_INVALIDSYMBOL) *)
+    x := ?;
+    y := @;
+
+    (* 2. Loi hang ky tu sai (ERR_INVALIDCHARCONSTANT) *)
+    c1 := 'ab';  (* Qua nhieu ky tu *)
+    c2 := '';    (* Rong *)
+
+    (* 3. Loi ten bien qua dai (ERR_IDENTTOOLONG) *)
+    (* Luu y: Loi nay chi hien neu Code Scanner co check do dai *)
+    TenBienNayDaiQuaMuoiLamKyTuChoPhep := 1;
+
+    (* 4. Loi so qua lon (ERR_NUMBERTOOLONG) *)
+    (* Luu y: Loi nay chi hien neu Code Scanner co check do dai so *)
+    n := 999999999999999999999999999;
+
+    (* 5. Loi comment khong dong (ERR_ENDOFCOMMENT) *)
+    (* QUAN TRONG: Loi nay phai de o cuoi cung vi no se an het phan con lai cua file
+       Bat dau mo comment tai day va khong bao gio dong lai...
+End.
