@@ -26,3 +26,4 @@ run: $(EXE)
 
 clean:
 	rm -f $(OBJS) $(EXE) $(TARGET)
+#./symtab tests/example6.kpl
